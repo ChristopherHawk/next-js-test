@@ -17,3 +17,10 @@
 -  Quitar la extensión `.example` del archivo `.env.local.example`para activar la variable de entorno.
 - `npm run dev` para iniciar el proyecto
 
+## o:
+
+- `npm run build` para compilar el proyecto el proyecto
+- `npm start` para compilar el iniciar el proyecto el proyecto
+
+
+
