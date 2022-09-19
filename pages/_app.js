@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import ConfigState from "./context/config/configState";
+import ConfigState from "../context/config/configState";
 function MyApp({ Component, pageProps }) {
   return (
     <div

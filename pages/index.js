@@ -1,15 +1,15 @@
 import React, { useEffect, useContext } from "react";
-import DrawerCustom from "./components/drawer";
-import CardCustom from "./components/card";
-import ModalCustom from "./components/modal";
-import AlertCustom from "./components/alert";
+import DrawerCustom from "../components/drawer";
+import CardCustom from "../components/card";
+import ModalCustom from "../components/modal";
+import AlertCustom from "../components/alert";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import ListItemButton from "@mui/material/ListItemButton";
 //Icons
 import SortByAlphaIcon from "@mui/icons-material/SortByAlpha";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
 // Context
-import configContext from "./context/config/configContext";
+import configContext from "../context/config/configContext";
 
 import { Container } from "@mui/material";
 
