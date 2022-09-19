@@ -110,14 +110,13 @@ const UserState = (props) => {
       payload: state,
     });
   };
-//Random number
-const  randomNumberProducts = (id) =>{
- 
-  if (id){ 
-   let randomNumber = id * 2
-     return  randomNumber;
-  }
- }
+  //Random number
+  const randomNumberProducts = (id) => {
+    if (id) {
+      let randomNumber = id * 2;
+      return randomNumber;
+    }
+  };
   //User detail
   const showUser = (userInfo) => {
     dispatch({
@@ -127,32 +126,26 @@ const  randomNumberProducts = (id) =>{
   };
   //User Organize
   const userOrder = () => {
-  
-      const userOrganize = state.users.sort(function (a, b) {
-        return a.first_name.localeCompare(b.first_name, "en", {
-          numeric: true,
-        });
+    const userOrganize = state.users.sort(function (a, b) {
+      return a.first_name.localeCompare(b.first_name, "en", {
+        numeric: true,
       });
-      
-      dispatch({
-        type: "GET_ALL_USERS",
-        payload: userOrganize,
-      });
-    
-    
+    });
+
+    dispatch({
+      type: "GET_ALL_USERS",
+      payload: userOrganize,
+    });
   };
-  //User Organize
+  //User Organize by sales
   const userOrderBySales = () => {
-    
-      const salesOrganize = state.users.sort(function(a, b) {
-        return randomNumberProducts(a.id) - randomNumberProducts(b.id)
-      });
-      dispatch({
-        type: "GET_ALL_USERS",
-        payload: salesOrganize,
-      });
-    
-    
+    const salesOrganize = state.users.sort(function (a, b) {
+      return randomNumberProducts(a.id) - randomNumberProducts(b.id);
+    });
+    dispatch({
+      type: "GET_ALL_USERS",
+      payload: salesOrganize,
+    });
   };
   //Delete user
   const removeUser = async (userID, name) => {
@@ -177,7 +170,6 @@ const  randomNumberProducts = (id) =>{
       openModalFunction(false);
     }
   };
- 
 
   return (
     <UserContext.Provider
