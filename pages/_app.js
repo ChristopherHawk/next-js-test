@@ -1,5 +1,6 @@
-import "../styles/globals.css";
+import Head from 'next/head';
 import ConfigState from "../context/config/configState";
+import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <div
@@ -7,6 +8,9 @@ function MyApp({ Component, pageProps }) {
     
   >
     <ConfigState>
+      <Head>
+        <title>Next js Dashboard</title>
+      </Head>
       <Component {...pageProps} />
     </ConfigState>
     </div>
